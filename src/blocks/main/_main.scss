@@ -1,0 +1,70 @@
+.about {
+  padding-top: 100px;
+  padding-bottom: 116px;
+
+  //--
+  outline: 1px solid blue;
+
+  &__title {
+    margin: 0;
+    margin-right: 120px;
+    padding: 0 280px 110px;
+
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    //width: 550px;
+    //height: 356px;
+    width: 39%;
+  }
+}
+
+.about-card {
+  position: relative;
+  display: block;
+  margin-top: 192px;
+  padding: 76px 80px 76px 70px;
+
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 13.5px 23px 43px 0px rgba($card-shadow-color, 0.1);
+  text-align: left;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 155px;
+    height: 129px;
+    top: -192px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+
+    background-image: url(../img/Advocate.png);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 55px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font: "Myriad Pro", sans-serif;
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
