@@ -210,13 +210,16 @@
     padding: 0;
     list-style: none;
   }
+
+  &__item {
+    max-width: 28%;
+  }
 }
 
 .achievement {
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  max-width: 28%;
   color: $text-grey;
 
   &__title {
@@ -238,5 +241,97 @@
 
   &__mark {
     display: block;
+  }
+}
+
+.news {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 105px;
+
+  color: $text-grey;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 104px;
+    padding: 0 80px;
+
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 30.3%;
+  }
+}
+
+.news-card {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 13.5px 23px 43px 0px rgba($card-shadow-color, .1);
+  overflow: hidden;
+  color: $text-grey;
+
+  &:hover &__img {
+    transform: scale(1.1);
+  }
+
+  &__photo {
+    width: 100%;
+    height: 222px;
+    overflow: hidden;
+  }
+
+  &__img {
+    transition: .5s;
+  }
+
+  &__wrap {
+    padding: 34px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 30px;
+    color: $text-ligh;
+  }
+
+  &__btn-more {
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $accent-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
