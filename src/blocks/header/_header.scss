@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-position-y: top;
   background-position-x: right;
+  background-size: cover;
   background-size: 57%;
 
   //--
@@ -19,8 +20,9 @@
     left: 19px;
 
     background-image: url(../img/circle-pink.svg);
-    opacity: .5;
     background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .5;
   }
 
   &::after {
@@ -33,6 +35,7 @@
 
     background-image: url(../img/shape-1.svg);
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__wrap {
@@ -54,8 +57,9 @@
       left: 556px;
   
       background-image: url(../img/circle-blue.svg);
-      opacity: .5;
       background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .5;
     }
 
     &::after {
@@ -67,8 +71,9 @@
       right: -170px;
   
       background-image: url(../img/circle-pink.svg);
-      opacity: .5;
       background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .5;
     }
   }
 
