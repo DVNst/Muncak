@@ -3,22 +3,20 @@
   padding-top: 100px;
   padding-bottom: 116px;
 
+  //--
+  outline: 1px solid blue;
+
   &::before {
     content: '';
     position: absolute;
-    direction: block;
     width: 100%;
     height: 1832px;
     left: 0;
-    top: 0;
+    top: 403px;
     background-image: url('../img/about-bg-left.svg');
     background-repeat: no-repeat;
-    background-position: 0 403px;
     opacity: .1;
   }
-
-  //--
-  outline: 1px solid blue;
 
   &__title {
     margin: 0;
@@ -32,51 +30,62 @@
   }
 
   &__list {
+    position: relative;
+    display: flex;
     margin: 0;
     padding: 0;
 
+    flex-direction: column;
     list-style: none;
   }
 
   &__item {
-    display: block;
+    position: relative;
     margin: 0;
     margin-bottom: 65px;
     width: 550px;
-    height: 356px;
+    min-height: 356px;
+    box-sizing: border-box;
     //width: 47%;
 
     &:first-child {
       margin-top: 192px;
     }
 
-    &:nth-child(odd):not(:last-child) {
-      margin-right: 67px;
+    &:nth-child(odd) {
+      align-self: flex-start;
     }
-
-    &:nth-child(even):not(:last-child) {
-      margin-left: auto;
+    
+    &:nth-child(even) {
+      align-self: flex-end;
     }
 
     &:nth-last-child(2) {
-      display: inline-block;
       margin-bottom: 0;
     }
 
+    &:nth-child(even):nth-last-child(2) {
+      margin-bottom: 138px;
+    }
+
+    &--btn:nth-child(odd) {
+      min-height: auto;
+    }
+
     &--btn {
-      display: inline-block;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
       margin: 0;
-      height: auto;
-      text-align: center;
+      padding: 0;
     }
   }
-
-  &__btn {}
 }
 
 .about-card {
   position: relative;
-  display: block;
   padding: 67px 70px 66px 70px;;
 
   border-radius: 20px;
@@ -90,33 +99,33 @@
     left: 50%;
     transform: translateX(-50%);
     background-repeat: no-repeat;
-    background-position-x: 0, 10px;
+    filter: drop-shadow(8px 0 0 rgba(#2160ac, 0.1));
   }
 
   &--advocate {
     &::before {
-      width: 155px + 10px;
+      width: 155px;
       height: 129px;
       top: -129px - 63px;
-      background-image: url(../img/advocate.png), url(../img/advocate-shadow-opacity.png);
+      background-image: url(../img/advocate.png);
     }
   }
 
   &--volunteer {
     &::before {
-      width: 112px + 10px;
+      width: 112px;
       height: 150px;
       top: -150px - 63px;
-      background-image: url(../img/volunteer.png), url(../img/volunteer-shadow-opacity.png);
+      background-image: url(../img/volunteer.png);
     }
   }
 
   &--explore {
     &::before {
-      width: 175px + 10px;
+      width: 175px;
       height: 108px;
       top: -108px - 63px;
-      background-image: url(../img/explore.png), url(../img/explore-shadow-opacity.png);
+      background-image: url(../img/explore.png);
     }
   }
 
@@ -137,4 +146,10 @@
   }
 }
 
-.features {}
+.features {
+  padding-top: 100px;
+  padding-bottom: 116px;
+
+  //--
+  outline: 1px solid blue;
+}
