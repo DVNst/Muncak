@@ -41,4 +41,9 @@ img {
   color: $white;
   box-shadow: 11px 19px 24px 2px rgba($btn-shadow-color, 0.2);
   border-radius: 45px;
+
+  &:hover {
+    background-color: $accent-color-pink;
+    box-shadow: 11px 19px 24px 2px rgba($accent-color-pink, 0.2);
+  }
 }
