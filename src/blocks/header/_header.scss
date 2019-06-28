@@ -1,15 +1,13 @@
 .main-header {
   position: relative;
+  margin-bottom: 91px;
+  padding-bottom: 272px;
+
   background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
   background-position-y: top;
   background-position-x: right;
-  background-size: cover;
-  background-size: 57%;
-
-  //--
-  height: 1091px;
-  outline: 1px solid blue;
+  background-size: content;
 
   &::before {
     position: absolute;
@@ -41,12 +39,6 @@
   &__wrap {
     position: relative;
     padding-top: 85px;
-    padding-bottom: 105px;
-
-    //--
-    box-sizing: border-box;
-    height: 986px;
-    outline: 1px solid lightseagreen;
 
     &::before {
       position: absolute;
@@ -67,7 +59,7 @@
       content: '';
       width: 140px;
       height: 140px;
-      top: 884px;
+      top: 886px;
       right: -170px;
   
       background-image: url(../img/circle-pink.svg);
@@ -86,7 +78,7 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 36px;
     font-size: 50px;
     line-height: 60px;
     font-weight: 700;
@@ -94,8 +86,7 @@
 
   &__text {
     margin: 0;
-    margin-bottom: 115px;
-    line-height: 40px;
+    margin-bottom: 104px;
     color: $text-color;
     opacity: .65;
   }
@@ -103,22 +94,30 @@
 
 .main-nav {
   display: flex;
-  margin-bottom: 145px;
+  margin-bottom: 137px;
 
   &__logo {
     margin-right: auto;
+    margin-left: -4px;
     width: 157px;
     height: 31px;
 
     font-size: 40px;
-    line-height: 36px;
+    line-height: 30px;
     font-weight: 700;
     text-decoration: none;
     color: $text-dark;
   }
 
+  &__logo:hover {
+    .main-nav__first-letter {
+      color: $accent-color-pink;
+    }
+  }
+
   &__first-letter {
     color: $accent-color;
+    transition: 0.5s;
   }
 
   &__list {
@@ -130,10 +129,14 @@
   }
 
   &__item {
-    padding: 0 32px;
+    padding: 0 34px;
 
     font-size: 18px;
     line-height: 35px;
+
+    &:last-child {
+      padding: 0;
+    }
   }
 
   &__link {
@@ -142,6 +145,7 @@
 
     text-decoration: none;
     color: $white;
+    transition: .5s;
 
     &:hover {
       border-bottom-color: inherit;
@@ -154,6 +158,7 @@
 
       background-color: $white;
       color: $login-color;
+      transition: .5s;
 
       &:hover {
         border-bottom-color: transparent;
