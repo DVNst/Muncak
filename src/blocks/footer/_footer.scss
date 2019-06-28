@@ -8,17 +8,20 @@
 
 .subscription {
   padding-top: 100px;
-  padding-bottom: 58px;
+  padding-bottom: 52px;
 
   //--
   outline: 1px solid blue;
 }
 
 .form {
-  padding: 80px 115px 102px 83px;
+  padding: 77px 115px 100px 83px;
 
   border-radius: 20px;
   background-color: $form-color;
+  background-image: url('../img/form-bg-all.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 21px 36.373px 35px 0px rgba($form-shadow-color, .15);
   color: $white;
   text-align: center;
@@ -37,12 +40,13 @@
 
   &__input {
     display: block;
-    margin: 0 auto 35px;
-    padding: 16px 33px;
+    margin: 0 auto 36px;
+    padding: 18px 33px;
     width: 44%;
 
+    border: none;
     border-radius: 20px;
-    background-color: #ffffff;
+    background-color: $white;
     font-size: 26px;
     line-height: 26px;
 
@@ -53,7 +57,7 @@
   }
 
   &__btn {
-    margin-top: 33px;
+    margin-top: 35px;
     margin-left: 25px;
     padding: 30px 75px;
 
@@ -69,6 +73,8 @@
 
   &__wrap {
     display: flex;
+    margin-bottom: 41px;
+
     justify-content: space-between;
   }
 
@@ -78,7 +84,7 @@
 
     font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 2.1px;
+    letter-spacing: 1.8px
   }
 
   &__list {
@@ -102,25 +108,47 @@
     }
   }
 
+  &__contacts {
+    flex-grow: 17;
+
+    //--
+    outline: 1px solid chartreuse;
+  }
+
   &__about-us {
-    margin-left: 35px;
+    flex-grow: 19;
+
+    //--
+    outline: 1px solid chartreuse;
   }
 
   &__programs {
-    margin-left: 40px;
+    flex-grow: 19;
+
+    //--
+    outline: 1px solid chartreuse;
   }
   
   &__support {
-    margin-left: 65px;
+    flex-grow: 20;
+
+    //--
+    outline: 1px solid chartreuse;
   }
   
   &__resources {
-    margin-left: 100px;
+
+    //--
+    outline: 1px solid chartreuse;
   }
 }
 
 .contacts {
   font-style: normal;
+
+  &__title {
+    margin-bottom: 36px;
+  }
 
   &__text {
     margin: 0;
@@ -142,5 +170,98 @@
 .about-us {
   &__title {
     margin-bottom: 40px;
+  }
+}
+
+.programs {
+  &__title {
+    letter-spacing: 1.5px;
+  }
+}
+
+.resources {
+  &__title {
+    letter-spacing: 0.7px;
+  }
+}
+
+.socials {
+  &__list {
+    display: flex;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 9px;
+
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 47px;
+
+    border-radius: 50%;
+    background-color: $white;
+
+    &:hover {
+      background-color: $accent-color-pink;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+    }
+
+    &--instagram {
+      &::after {
+        width: 21px;
+        height: 21px;
+        background-image: url('../img/socials-instagram.svg');
+      }
+
+      &:hover {
+        &::after {
+          background-image: url('../img/socials-instagram-hover.svg');
+        }
+      }
+    }
+
+    &--facebook {
+      &::after {
+        width: 10px;
+        height: 20px;
+        background-image: url('../img/socials-facebook.svg');
+      }
+
+      &:hover {
+        &::after {
+          background-image: url('../img/socials-facebook-hover.svg');
+        }
+      }
+    }
+
+    &--twitter {
+      &::after {
+        width: 21px;
+        height: 18px;
+        background-image: url('../img/socials-twitter.svg');
+      }
+
+      &:hover {
+        &::after {
+          background-image: url('../img/socials-twitter-hover.svg');
+        }
+      }
+    }
   }
 }
