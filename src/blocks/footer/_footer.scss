@@ -1,0 +1,146 @@
+.main-footer {
+  background-image: url('../img/footer-bg-all.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  //--
+  outline: 1px solid blue;
+}
+
+.subscription {
+  padding-top: 100px;
+  padding-bottom: 58px;
+
+  //--
+  outline: 1px solid blue;
+}
+
+.form {
+  padding: 80px 115px 102px 83px;
+
+  border-radius: 20px;
+  background-color: $form-color;
+  box-shadow: 21px 36.373px 35px 0px rgba($form-shadow-color, .15);
+  color: $white;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 69px;
+    margin-left: 17px;
+    padding: 0 115px;
+
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.65px;
+  }
+
+  &__input {
+    display: block;
+    margin: 0 auto 35px;
+    padding: 16px 33px;
+    width: 44%;
+
+    border-radius: 20px;
+    background-color: #ffffff;
+    font-size: 26px;
+    line-height: 26px;
+
+    &::placeholder {
+      color: $text-ligh;
+      opacity: .6;
+    }
+  }
+
+  &__btn {
+    margin-top: 33px;
+    margin-left: 25px;
+    padding: 30px 75px;
+
+    border: none;
+    background-color: $form-btn-color;
+  }
+}
+
+.footer-nav {
+  padding-top: 40px;
+
+  color: $white;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__about-us {
+    margin-left: 35px;
+  }
+
+  &__programs {
+    margin-left: 40px;
+  }
+  
+  &__support {
+    margin-left: 65px;
+  }
+  
+  &__resources {
+    margin-left: 100px;
+  }
+}
+
+.contacts {
+  font-style: normal;
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  &__link {
+    display: block;
+
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.about-us {
+  &__title {
+    margin-bottom: 40px;
+  }
+}
