@@ -6,6 +6,11 @@ body {
   height: 100%;
   background-color: $bg-color;
   color: $text-dark;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -41,10 +46,17 @@ input[type="radio"].visually-hidden {
   max-width: 1404px;
   padding: 0 100px;
 
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+
   &--extra {
     padding: 0 116px;
     box-sizing: border-box;
 
+    @media (max-width: 1024px) {
+      padding: 0 70px;
+    }
   }
 }
 
@@ -60,6 +72,14 @@ input[type="radio"].visually-hidden {
   box-shadow: 11px 19px 24px 2px rgba($btn-shadow-color, 0.2);
   border-radius: 45px;
   transition: .5s;
+
+  @media (max-width: 1200px) {
+    padding: 22px 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 50px;
+  }
 
   &:hover {
     background-color: $accent-color-pink;
