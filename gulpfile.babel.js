@@ -40,12 +40,12 @@ const webpackConfig = require("./webpack.config.js"),
 				"./src/views/index.html",
 				"./src/pages/*.html"
 			],
-			dist: "./dist/",
+			dist: "./docs/",
 			watch: "./src/**/*.html"
 		},
 		styles: {
 			src: "./src/styles/main.scss",
-			dist: "./dist/styles/",
+			dist: "./docs/styles/",
 			watch: [
 				"./src/blocks/**/*.scss",
 				"./src/styles/**/*.scss"
@@ -53,7 +53,7 @@ const webpackConfig = require("./webpack.config.js"),
 		},
 		scripts: {
 			src: "./src/js/index.js",
-			dist: "./dist/js/",
+			dist: "./docs/js/",
 			watch: [
 				"./src/blocks/**/*.js",
 				"./src/js/**/*.js"
@@ -62,7 +62,7 @@ const webpackConfig = require("./webpack.config.js"),
 		svg: {
 			src: "./src/img/svg/*.svg",
 			watch: "./src/img/svg/*.svg",
-			dist: "./dist/img/sprites/",
+			dist: "./docs/img/sprites/",
 		},
 		images: {
 			src: [
@@ -70,26 +70,26 @@ const webpackConfig = require("./webpack.config.js"),
 				"!./src/img/svg/*.svg",
 				"!./src/img/favicon.{jpg,jpeg,png,gif}"
 			],
-			dist: "./dist/img/",
+			dist: "./docs/img/",
 			watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}"
 		},
 		webp: {
 			src: "./src/img/**/*_webp.{jpg,jpeg,png}",
-			dist: "./dist/img/",
+			dist: "./docs/img/",
 			watch: "./src/img/**/*_webp.{jpg,jpeg,png}"
 		},
 		fonts: {
 			src: "./src/fonts/**/*.{ttf,otf,woff,woff2}",
-			dist: "./dist/fonts/",
+			dist: "./docs/fonts/",
 			watch: "./src/fonts/**/*.{ttf,otf,woff,woff2}"
 		},
 		favicons: {
 			src: "./src/img/favicon.{jpg,jpeg,png,gif}",
-			dist: "./dist/img/favicons/",
+			dist: "./docs/img/favicons/",
 		},
 		server_config: {
 			src: "./src/.htaccess",
-			dist: "./dist/"
+			dist: "./docs/"
 		}
 	};
 
@@ -98,7 +98,7 @@ webpackConfig.devtool = production ? false : "cheap-eval-source-map";
 
 export const server = () => {
 	browsersync.init({
-		server: "./dist/",
+		server: "./docs/",
 		tunnel: false,
 		notify: true
 	});
@@ -111,7 +111,7 @@ export const server = () => {
 	gulp.watch(paths.webp.watch, webpimages);
 };
 
-export const cleanFiles = () => gulp.src("./dist/*", {read: false})
+export const cleanFiles = () => gulp.src("./docs/*", {read: false})
 	.pipe(clean())
 	.pipe(debug({
 		"title": "Cleaning..."
