@@ -69,6 +69,12 @@
     }
   }
 
+  &__wrap {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 69px;
@@ -194,6 +200,7 @@
   &__title {
     margin: 0;
     margin-bottom: 30px;
+    display: block;
 
     font-size: 18px;
     text-transform: uppercase;
@@ -312,10 +319,12 @@
 }
 
 .contacts {
-  font-style: normal;
-
   &__title {
     margin-bottom: 36px;
+  }
+
+  &__address {
+    font-style: normal;
   }
 
   &__text {

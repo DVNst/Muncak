@@ -6,7 +6,7 @@
 		<title>Muncak</title>
 		<meta name="theme-color" content="#c9e0e04d">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="viewport" content="initial-scale=1.0, width=device-width">
 		<link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
 		<link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
@@ -16,7 +16,7 @@
 		<link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
 		<link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
-		<link rel="stylesheet" href="./styles/main.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 	</head>
 	<body>
 		<header class="main-header">
@@ -40,7 +40,7 @@
 		      <div class="main-header__desc">
 		        <h1 class="main-header__title">Let’s get the top  of Mountain</h1>
 		        
-		        <p class="main-header__text">Here is the hiking information you need to decide</br> if it is right for you, and to make it more interesting,</br> enjoyable, and safe.</p>
+		        <p class="main-header__text">Here is the hiking information you need to decide<br> if it is right for you, and to make it more interesting,<br> enjoyable, and safe.</p>
 		
 		        <a href="#" class="btn main-header__btn-start">Get Started</a>
 		      </div>
@@ -157,42 +157,46 @@
 		</main>
 		<footer class="main-footer">
 		  <section class="main-footer__subscription subscription wrap">
-		    <h1 class="visually-hidden">Subscription</h1>
+		    <h2 class="visually-hidden">Subscription</h1>
 		
-		    <form action="" class="subscription__form form">
-		      <legend class="form__title">Receive the latest updates on how to protect trails. Subscribe to the monthly edition of Paperless Trails.</legend>
+		    <form action="#" class="subscription__form form">
+		      <fieldset class="form__wrap">
+		        <legend class="form__title">Receive the latest updates on how to protect trails. Subscribe to the monthly edition of Paperless Trails.</legend>
 		
-		      <input class="form__input" type="text" placeholder="Name">
+		        <input class="form__input" type="text" placeholder="Name">
 		
-		      <input class="form__input" type="email" placeholder="Email Address">
+		        <input class="form__input" type="email" placeholder="Email Address">
 		
-		      <button class="btn form__btn">Subscribe</button>
+		        <button class="btn form__btn">Subscribe</button>
+		      </fieldset>
 		    </form>
 		  </section>
 		
 		  <section class="main-footer__nav footer-nav">
-		    <h1 class="visually-hidden">Navigation</h1>
+		    <h2 class="visually-hidden">Navigation</h1>
 		
 		    <div class="wrap">
 		      <div class="footer-nav__wrap">
-		        <address class="footer-nav__contacts contacts">
+		        <div class="footer-nav__contacts contacts">
 		          <h2 class="footer-nav__title contacts__title">Contact us</h2>
 		
-		          <p class="contacts__text">
-		            Muncak hiking society</br>
-		            8605 Second Ave.</br>
-		            Silver Spring, MD 20910
-		          </p>
+		          <address class="contacts__address">
+		            <p class="contacts__text">
+		              Muncak hiking society<br>
+		              8605 Second Ave.<br>
+		              Silver Spring, MD 20910
+		            </p>
 		
-		          <p class="contacts__text">
-		            <a href="mailto:Info@muncak.org" class="footer-nav__link contacts__link">Info@muncak.org</a>
-		            <a href="tel:13015656704" class="footer-nav__link contacts__link">1-301-565-6704 (Main)</a>
-		            <a href="tel:18009728608" class="footer-nav__link contacts__link">1-800-972-8608 (Toll-free)</a>
-		          </p>
-		        </address>
+		            <p class="contacts__text">
+		              <a href="mailto:Info@muncak.org" class="footer-nav__link contacts__link">Info@muncak.org</a>
+		              <a href="tel:13015656704" class="footer-nav__link contacts__link">1-301-565-6704 (Main)</a>
+		              <a href="tel:18009728608" class="footer-nav__link contacts__link">1-800-972-8608 (Toll-free)</a>
+		            </p>
+		          </address>
+		        </div>
 		
 		        <div class="footer-nav__about-us about-us">
-		          <h2 class="footer-nav__title about-us__title">about us</h2>
+		          <h2 class="footer-nav__title about-us__title">About us</h2>
 		
 		          <ul class="footer-nav__list about-us__list">
 		            <li class="footer-nav__item about-us__item">
@@ -292,6 +296,6 @@
 		    </div>
 		  </section>
 		</footer>
-		<script src="./js/main.min.js" defer></script>
+		<script src="./js/main.js" defer></script>
 	</body>
 </html>
